@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio Website</title>
+        <link rel="stylesheet" href="style.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="box">
+                <p class="logo">Kevin</p>
+                <nav class="navbar">
+                  
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Skills.html">Skills</a></li>
+                        <li><a href="Projects.html">Projects</a></li>
+                        <li><a href="About.html">Portfolio</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="content">
+                    <div class="popup" onclick="myFunction()">Calculator Porject
+                        <span class="popuptext" id="myPopup"><a href="project1.html">Project Link</a></span>
+                      </div>
+
+                      <div class="popup" onclick="myFunction1()">JAVA Porject
+                        <span class="popuptext" id="myPop"><a href="project2.html">Project Link</a></span>
+                      </div>
+
+                      <div class="popup" onclick="myFunction2()">Algorithims Porject
+                        <span class="popuptext" id="Popup"><a href="project3.html">Project Link</a></span>
+                      </div>
+
+                      <div class="popup" onclick="myFunction3()">Airways Porject
+                        <span class="popuptext" id="Pop"><a href="project4.html">Project Link</a></span>
+                      </div>
+                      
+                    <div class="social">
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com/?lang=en"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+    // When the user clicks on <div>, open the popup
+    function myFunction() {
+      var popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
+    }
+    function myFunction1() {
+      var popup = document.getElementById("myPop");
+      popup.classList.toggle("show");
+    }
+    function myFunction2() {
+      var popup = document.getElementById("Popup");
+      popup.classList.toggle("show");
+    }
+    function myFunction3() {
+      var popup = document.getElementById("Pop");
+      popup.classList.toggle("show");
+    }
+    </script>

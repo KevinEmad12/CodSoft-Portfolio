@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio Website</title>
+        <link rel="stylesheet" href="style.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="box-1">
+                <p class="logo">Kevin</p>
+                <nav class="navbar">
+                  
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Skills.html">Skills</a></li>
+                        <li><a href="Projects.html">Projects</a></li>
+                        <li><a href="About.html">Portfolio</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="content">
+
+                    <div class="section-1">
+                        <h1>Description</h1>
+                        <h3>Calculator Project using Angular</h3>
+                        <p>It is a full working Calculator app which contains most math operations for you to add, subtracting, multipying, dividing, and percentage rate</p>
+                        <a href="https://github.com/KevinEmad12/Calculator-application" class="btn">Check it out on github!</a>
+                    </div>
+
+                    <div class="section-2">
+                    <div class="slideshow-container">
+
+                        <div class="mySlides fade">
+                          <img src="calc.PNG" style="width:2000%;">
+
+                        </div>
+                      
+                        <div class="mySlides fade">
+                          <img src="calc1.PNG" style="width:100%">
+                          
+                        </div>
+                    
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                      </div>
+                      <br>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com/?lang=en"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+	let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
